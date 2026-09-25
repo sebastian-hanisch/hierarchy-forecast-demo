@@ -64,7 +64,7 @@ def test_many_depots_short_history_preset():
     a = _preset("Viele Depots, kurze Fehlerhistorie")
     s = a.summary
     assert a.hier.m == 106 and s["base"]["mean"] == pytest.approx(1.004, abs=0.05) and s["base"]["levels"][0] == pytest.approx(1.124, abs=0.06)
-    assert s["mint_sample"]["mean"] > 100.0                                                       # Stichprobenkovarianz aus 60 Zeilen für 106 Knoten: singulär, das Ergebnis unbrauchbar
+    assert s["mint_sample"]["mean"] > 20.0                                                        # Stichprobenkovarianz aus 60 Zeilen für 106 Knoten: singulär; der Wert hängt vom System ab (Windows 2585, CI-Linux 72,8)
     assert s["mint_shrink"]["mean"] == pytest.approx(0.866, abs=0.05) and s["wls_var"]["mean"] == pytest.approx(0.908, abs=0.05) and s["bu"]["mean"] == pytest.approx(0.916, abs=0.05)
     assert _gain(a, "mint_shrink") == pytest.approx(-13.8, abs=3.5) and _gain(a, "wls_var") == pytest.approx(-9.6, abs=3) and _gain(a, "bu") == pytest.approx(-8.8, abs=3)
     assert a.shrink_lambda == pytest.approx(0.454, abs=0.1) and _gain(a, "mint_shrink") < _gain(a, "wls_var") < 0
