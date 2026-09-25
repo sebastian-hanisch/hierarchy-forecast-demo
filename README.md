@@ -1,5 +1,7 @@
 # 🌳 Hierarchische Abstimmung – Prognosen, die sich addieren
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-hierarchy-forecast-demo.streamlit.app/)**
+
 Achtes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning. Nachfolger der [Prognoseintervalle](https://github.com/sebastian-hanisch/forecast-interval-demo): dort ging es um die Unsicherheit einer Prognose, hier um Prognosen, die **zusammenpassen**.
 Geplant sind drei weitere Stücke (Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
 
