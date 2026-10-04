@@ -3,7 +3,7 @@
 **[→ Demo live ausprobieren](https://sebastianhanisch-hierarchy-forecast-demo.streamlit.app/)**
 
 Achtes Stück der **Zeitreihen-Prognose-Linie** der "Konzepte"-Reihe im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning. Nachfolger der [Prognoseintervalle](https://github.com/sebastian-hanisch/forecast-interval-demo): dort ging es um die Unsicherheit einer Prognose, hier um Prognosen, die **zusammenpassen**.
-Geplant sind drei weitere Stücke (Kombination, Prognose → Bestand, ein vortrainiertes Netz; noch nicht gebaut).
+Drei weitere Stücke folgen in der Linie (Kombination, Prognose → Bestand, ein vortrainiertes Netz; alle gebaut).
 
 Ein Netz von Depots, in Regionen gegliedert: **jeder Knoten bekommt seine eigene Prognose** – das Netz, jede Region, jedes Depot. Die Prognosen widersprechen sich: die Summe der Depot-Prognosen ist nicht die Prognose der Region. **Hierarchische Abstimmung** macht aus den Basisprognosen kohärente, die sich exakt addieren:
 **Bottom-up**, **Top-down**, **Middle-out** und die Verfahren, die alle Knoten zusammen verwenden – **OLS, WLS und MinT** (kleinste Fehlervarianz, Wickramasuriya et al. 2019; Stichprobe oder zur Diagonalen geschrumpft). Die Demo misst auf einem erzeugten Depot-Netz, **was das an Genauigkeit bringt**: je Ebene, je Horizont, bei wachsender gemeinsamer Bewegung und bei wenig Fehlerhistorie.
@@ -105,3 +105,7 @@ streamlit run app.py
 ```
 
 Gebaut mit Streamlit, Plotly und numpy (Gegenprobe im Test: scipy).
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Zeitreihen-Prognose: von Naiv bis Vortraining](https://sebastianhanisch.net/konzepte-zeitreihen-prognose.html).
